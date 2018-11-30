@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sugars</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+
+
+
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Sugars</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+
+<% if user_signed_in? %>
+
+<li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+
+<li><%= link_to '投稿', new_product_path, method: :get %>
+
+
+<% else %>
+<li><%= link_to 'ログイン', new_user_session_path, method: :get %>
+
+
+
+<% end %>
+
+
+      </ul>
+    </div>
+  </nav>
+
+
+    <%= yield %>
+  </body>
+</html>

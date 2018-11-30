@@ -1,0 +1,30 @@
+<div class="contents row" >
+
+
+        <% @sugars.each do |product| %>
+
+
+
+<%= image_tag product.avatar, class: "avatar" %><br>
+    <p>商品名 <%= product.name %></p>
+    <p>会社名 <%= product.company %></p>
+    <p>商品説明 <%= product.detail %></p>
+    <p>原材料 <%= product.material %></p>
+    <p>保管方法 <%= product.preservation %></p>
+    <p>容量 <%= product.quantity %></p>
+<%= link_to "詳細", product_path(product.id), method: :get %><br>
+<br>
+
+<%= link_to '編集', edit_product_path(product.id), method: :get %><br>
+<br>
+
+
+
+<%= link_to "削除", product_path(product.id), method: :delete %><br>
+<br>
+
+--------------------------------------------<br>
+
+
+  <% end %>
+</div>

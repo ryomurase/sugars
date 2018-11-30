@@ -1,0 +1,60 @@
+<div class="row form">
+
+  <div class="col-lg-12">
+
+
+    <%= form_for @product do |f| %>
+      <h2>新規商品登録</h2>
+
+      <div class="form-group">
+        <div class="col-lg-6">
+          <%= f.text_field :name, placeholder: "商品名", class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-lg-6">
+          <%= f.text_field :company, placeholder: "会社名", class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-lg-6">
+          <%= f.text_field :material, placeholder: "原材料名", class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-lg-6">
+          <%= f.text_field :quantity, placeholder: "容量", class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-lg-6">
+          <%= f.text_field :preservation, placeholder: "保存方法", class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+      <div class="col-lg-6">
+        <%= f.collection_select :category_id, @categories, :id, :name, selected: 1, class: "browser-default" %>
+      </div>
+    </div>
+
+      <div class="form-group">
+          <div class="field">
+          <%= f.file_field :avatar %>
+          </div>
+      </div>
+      <div class="form-group">
+        <%= f.submit "送信", class: "btn btn-primary withripple" %>
+      </div>
+    <% end %>
+
+
+
+
+
+  </div>
+</div>
