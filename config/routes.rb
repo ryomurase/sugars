@@ -9,4 +9,7 @@ root 'products#index'
   end
   resources :users, only: [:show]
 
+  resources :categories
+
+
 end

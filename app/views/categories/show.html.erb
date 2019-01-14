@@ -8,14 +8,13 @@
 <div class="card-image">
 <%= image_tag product.avatar, class: "avatar" %><br>
 </div>
-    <span class="card-title">　<%= product.name.truncate(10) %></span>
+    <span class="card-title">　<%= product.name %></span>
 
     <div class="card-content">
     <p>会社名： <%= product.company %></p>
-    <p>商品説明： <%= product.detail.truncate(5) %></p>
-
-    <p>原材料： <%= product.material.truncate(5) %></p>
-    <p>保管方法： <%= product.preservation.truncate(5) %></p>
+    <p>商品説明： <%= product.detail %></p>
+    <p>原材料： <%= product.material %></p>
+    <p>保管方法： <%= product.preservation %></p>
     <p>容量： <%= product.quantity %></p>
     <p>カテゴリー： <%= link_to product.category.name,category_path(product.category_id) %></p>
 </div>
@@ -24,15 +23,9 @@
 <div class="card-action center">
 <%= link_to "詳細", product_path(product.id), method: :get %>
 
-
-<% if user_signed_in? && current_user.id == product.user_id %>
-
 <%= link_to '編集', edit_product_path(product.id), method: :get %>
 
 <%= link_to "削除", product_path(product.id), method: :delete %>
-
-<% end %>
-
 </div>
 
 </div>

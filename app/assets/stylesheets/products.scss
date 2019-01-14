@@ -2,6 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .avatar {
-  width: 500px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
+object-fit: contain;
+}
+
+.contents {
+  margin: 10px auto;
+  width:1000px;
+}
+
+.center {
+text-algin: center;
+}
+
+.form {
+  margin: 10px auto;
+  width:500px;
+}
+
+.nav-wrapper {
+  margin: 10px auto;
+  width:900px;
 }

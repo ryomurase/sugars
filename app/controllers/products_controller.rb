@@ -40,7 +40,7 @@ end
 
 private
 def product_params
-      params.require(:product).permit(:name, :avatar, :detail, :company, :material, :preservation, :quantity).merge(user_id: current_user.id)
+      params.require(:product).permit(:name, :avatar, :detail, :company, :material, :preservation, :quantity, :category_id).merge(user_id: current_user.id)
 end
 
 
