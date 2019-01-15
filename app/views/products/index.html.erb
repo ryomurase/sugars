@@ -32,12 +32,11 @@
 <%= link_to "削除", product_path(product.id), method: :delete , data: { confirm: "本当に削除しますか？"} %>
 
 <% end %>
-
 </div>
 
 </div>
-
 
 </div>
   <% end %>
 </div>
+  <div class="center"><%= paginate(@sugars) %></div>

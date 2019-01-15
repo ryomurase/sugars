@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
 
 def index
-  @sugars = Product.all
+  @sugars = Product.all.page(params[:page]).per(9)
 end
 
 def new
