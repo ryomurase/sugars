@@ -22,6 +22,7 @@ def destroy
 
 def edit
  @product = Product.find(params[:id])
+ @categories=Category.all
 end
 
 def update
